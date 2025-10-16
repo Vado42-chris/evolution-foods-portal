@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: evolution-foods-portal
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    healthCheckPath: /
+    autoDeploy: true
+    branch: main
+    rootDir: .
